@@ -1,0 +1,187 @@
+{
+  "app_name": "Portfolio Website with Blog",
+  "env_configs": [
+    {
+      "name": "DATABASE_URL",
+      "description": "Database connection string for blog posts and portfolio items."
+    },
+    {
+      "name": "STORAGE_BUCKET_URL",
+      "description": "URL for image and asset storage (e.g., AWS S3, Cloudinary)."
+    },
+    {
+      "name": "CONTACT_FORM_EMAIL_RECIPIENT",
+      "description": "Email address to receive submissions from the contact form."
+    },
+    {
+      "name": "ADMIN_USERNAME",
+      "description": "Username for accessing the blog administration panel."
+    },
+    {
+      "name": "ADMIN_PASSWORD",
+      "description": "Password for accessing the blog administration panel."
+    },
+    {
+      "name": "GOOGLE_ANALYTICS_ID",
+      "description": "Google Analytics tracking ID for website analytics (optional)."
+    }
+  ],
+  "suggested_features": [
+    {
+      "name": "Responsive Design",
+      "description": "Ensure optimal viewing experience across various devices (desktop, tablet, mobile)."
+    },
+    {
+      "name": "SEO Optimization",
+      "description": "Implement best practices for search engine optimization (meta tags, sitemap, semantic HTML)."
+    },
+    {
+      "name": "Content Management System (CMS) for Blog",
+      "description": "An admin interface to create, edit, delete blog posts, categories, and tags."
+    },
+    {
+      "name": "Contact Form",
+      "description": "A functional form for visitors to send messages directly."
+    },
+    {
+      "name": "Image and Asset Optimization",
+      "description": "Automatic compression and responsive serving of images for faster load times."
+    },
+    {
+      "name": "Social Media Integration",
+      "description": "Links to social profiles and share buttons for blog posts."
+    },
+    {
+      "name": "Authentication System",
+      "description": "Secure login for blog administrators."
+    },
+    {
+      "name": "Comments Section",
+      "description": "Enable visitors to comment on blog posts (e.g., Disqus, custom solution)."
+    }
+  ],
+  "pages": [
+    {
+      "name": "Home Page",
+      "route": "/",
+      "description": "Introduction to the portfolio owner, a brief overview of skills and featured work/blog posts.",
+      "components": [
+        "Hero Section",
+        "About Me Summary",
+        "Featured Projects (optional)",
+        "Latest Blog Posts (optional)"
+      ]
+    },
+    {
+      "name": "About Page",
+      "route": "/about",
+      "description": "Detailed personal and professional background, skills, experience, and maybe a CV/resume link.",
+      "components": [
+        "Biography/Story",
+        "Skills Section",
+        "Experience/Education Timeline"
+      ]
+    },
+    {
+      "name": "Portfolio Page",
+      "route": "/portfolio",
+      "description": "Displays a gallery or list of projects with links to detailed views.",
+      "components": [
+        "Project Grid/List",
+        "Project Filters (by category, technology)"
+      ]
+    },
+    {
+      "name": "Portfolio Project Detail Page",
+      "route": "/portfolio/[slug]",
+      "description": "Dedicated page for each portfolio project, including description, technologies, images, and live demo/repo links.",
+      "components": [
+        "Project Title",
+        "Project Description",
+        "Technologies Used",
+        "Image Gallery/Video Embed",
+        "Links (Live Demo, GitHub Repo)"
+      ]
+    },
+    {
+      "name": "Blog Page",
+      "route": "/blog",
+      "description": "Lists all blog posts, potentially with pagination, categories, and tags.",
+      "components": [
+        "Blog Post List",
+        "Categories Filter",
+        "Tags Filter",
+        "Search Bar",
+        "Pagination"
+      ]
+    },
+    {
+      "name": "Blog Post Detail Page",
+      "route": "/blog/[slug]",
+      "description": "Displays the full content of a single blog post.",
+      "components": [
+        "Post Title",
+        "Author & Date",
+        "Post Content",
+        "Tags & Categories",
+        "Share Buttons",
+        "Comments Section (optional)",
+        "Related Posts (optional)"
+      ]
+    },
+    {
+      "name": "Contact Page",
+      "route": "/contact",
+      "description": "Provides a contact form and other ways to get in touch.",
+      "components": [
+        "Contact Form",
+        "Email Address",
+        "Social Media Links"
+      ]
+    },
+    {
+      "name": "Admin Login Page",
+      "route": "/admin/login",
+      "description": "Page for administrators to log in.",
+      "components": [
+        "Login Form (Username, Password)"
+      ]
+    },
+    {
+      "name": "Admin Dashboard",
+      "route": "/admin/dashboard",
+      "description": "Overview for administrators, links to manage content.",
+      "components": [
+        "Quick Stats (post count, comments)",
+        "Recent Activity",
+        "Navigation to Post Management, Settings"
+      ],
+      "requires_auth": true
+    },
+    {
+      "name": "Admin Post Management Page",
+      "route": "/admin/posts",
+      "description": "CRUD interface for managing blog posts.",
+      "components": [
+        "Post List (with Edit/Delete)",
+        "Create New Post Button",
+        "Search/Filter Posts"
+      ],
+      "requires_auth": true
+    },
+    {
+      "name": "Admin Post Editor Page",
+      "route": "/admin/posts/edit/[id]",
+      "description": "Page to create or edit a blog post.",
+      "components": [
+        "Rich Text Editor",
+        "Title Field",
+        "Slug Field",
+        "Category/Tags Selector",
+        "Publish Date",
+        "Save/Publish Button"
+      ],
+      "requires_auth": true
+    }
+  ]
+}

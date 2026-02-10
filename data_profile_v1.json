@@ -1,0 +1,25 @@
+{
+  "data_present": true,
+  "modality": "tabular",
+  "rows": 48735,
+  "columns": 14,
+  "column_names": [
+    "Unnamed: 0",
+    "recipe_id",
+    "recipe_name",
+    "aver_rate",
+    "image_url",
+    "review_nums",
+    "calories",
+    "fat",
+    "carbohydrates",
+    "protein",
+    "cholesterol",
+    "sodium",
+    "fiber",
+    "ingredients_list"
+  ],
+  "target_detected": false,
+  "target_column": null,
+  "size_mb": 14.61
+}

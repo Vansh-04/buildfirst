@@ -1,0 +1,14 @@
+{
+  "feature_count": 9,
+  "feature_names": [
+    "aver_rate",
+    "review_nums",
+    "calories",
+    "fat",
+    "carbohydrates",
+    "protein",
+    "cholesterol",
+    "sodium",
+    "fiber"
+  ]
+}

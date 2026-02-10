@@ -1,6 +1,18 @@
+# Python
+__pycache__/
+*.pyc
+*.pkl
+
+# Generated / runtime
+generated_projects/
+build_status.json
+conversation_state.json
+
+# IDE / OS
 .idea/
 .DS_Store
 *.iml
-__pycache__/
-.env
+
+# Virtual env
 venv/
+.env

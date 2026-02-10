@@ -1,0 +1,47 @@
+{
+  "spec_version": "1.0",
+  "project_identity": {
+    "name": "recipe genrator",
+    "description": "its good ",
+    "primary_goal": "use knn to get closest ingrideits and nutrients from dataset"
+  },
+  "functional_scope": {
+    "application_type": "web_app",
+    "problem_domain": "ml"
+  },
+  "feature_set": {
+    "core_features": [
+      "inference",
+      "metrics_display"
+    ],
+    "optional_features": [
+      "model_explainability",
+      "user_feedback_loop",
+      "prediction_history"
+    ]
+  },
+  "ui_spec": {
+    "ui_style": "dashboard",
+    "pages": [
+      "5 blanks fro the nutrients number and ngridients and generate rthe top 3 and then give thier photos"
+    ],
+    "design_tone": "modern"
+  },
+  "system_constraints": {
+    "no_hardcoding": true,
+    "self_healing": true,
+    "config_driven": true,
+    "reproducible": true
+  },
+  "deployment_spec": {
+    "containerized": true,
+    "local_run": true,
+    "cloud_ready": true,
+    "git_push_on_success": true
+  },
+  "handoff": {
+    "approved": true,
+    "approved_by_user": true,
+    "timestamp": "2026-02-03T17:00:59.473240"
+  }
+}

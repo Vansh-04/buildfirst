@@ -1,0 +1,216 @@
+{
+  "application": {
+    "name": "Portfolio Website with Blog",
+    "type": "website"
+  },
+  "pages": [
+    {
+      "id": "home_page",
+      "title": "Home Page",
+      "route": "/",
+      "description": "Introduction to the portfolio owner, a brief overview of skills and featured work/blog posts.",
+      "components": [
+        "Hero Section",
+        "About Me Summary",
+        "Featured Projects (optional)",
+        "Latest Blog Posts (optional)"
+      ],
+      "requires_auth": false
+    },
+    {
+      "id": "about_page",
+      "title": "About Page",
+      "route": "/about",
+      "description": "Detailed personal and professional background, skills, experience, and maybe a CV/resume link.",
+      "components": [
+        "Biography/Story",
+        "Skills Section",
+        "Experience/Education Timeline"
+      ],
+      "requires_auth": false
+    },
+    {
+      "id": "portfolio_page",
+      "title": "Portfolio Page",
+      "route": "/portfolio",
+      "description": "Displays a gallery or list of projects with links to detailed views.",
+      "components": [
+        "Project Grid/List",
+        "Project Filters (by category, technology)"
+      ],
+      "requires_auth": false
+    },
+    {
+      "id": "portfolio_project_detail_page",
+      "title": "Portfolio Project Detail Page",
+      "route": "/portfolio/[slug]",
+      "description": "Dedicated page for each portfolio project, including description, technologies, images, and live demo/repo links.",
+      "components": [
+        "Project Title",
+        "Project Description",
+        "Technologies Used",
+        "Image Gallery/Video Embed",
+        "Links (Live Demo, GitHub Repo)"
+      ],
+      "requires_auth": false
+    },
+    {
+      "id": "blog_page",
+      "title": "Blog Page",
+      "route": "/blog",
+      "description": "Lists all blog posts, potentially with pagination, categories, and tags.",
+      "components": [
+        "Blog Post List",
+        "Categories Filter",
+        "Tags Filter",
+        "Search Bar",
+        "Pagination"
+      ],
+      "requires_auth": false
+    },
+    {
+      "id": "blog_post_detail_page",
+      "title": "Blog Post Detail Page",
+      "route": "/blog/[slug]",
+      "description": "Displays the full content of a single blog post.",
+      "components": [
+        "Post Title",
+        "Author & Date",
+        "Post Content",
+        "Tags & Categories",
+        "Share Buttons",
+        "Comments Section (optional)",
+        "Related Posts (optional)"
+      ],
+      "requires_auth": false
+    },
+    {
+      "id": "contact_page",
+      "title": "Contact Page",
+      "route": "/contact",
+      "description": "Provides a contact form and other ways to get in touch.",
+      "components": [
+        "Contact Form",
+        "Email Address",
+        "Social Media Links"
+      ],
+      "requires_auth": false
+    },
+    {
+      "id": "admin_login_page",
+      "title": "Admin Login Page",
+      "route": "/admin/login",
+      "description": "Page for administrators to log in.",
+      "components": [
+        "Login Form (Username, Password)"
+      ],
+      "requires_auth": false
+    },
+    {
+      "id": "admin_dashboard",
+      "title": "Admin Dashboard",
+      "route": "/admin/dashboard",
+      "description": "Overview for administrators, links to manage content.",
+      "components": [
+        "Quick Stats (post count, comments)",
+        "Recent Activity",
+        "Navigation to Post Management, Settings"
+      ],
+      "requires_auth": true
+    },
+    {
+      "id": "admin_post_management_page",
+      "title": "Admin Post Management Page",
+      "route": "/admin/posts",
+      "description": "CRUD interface for managing blog posts.",
+      "components": [
+        "Post List (with Edit/Delete)",
+        "Create New Post Button",
+        "Search/Filter Posts"
+      ],
+      "requires_auth": true
+    },
+    {
+      "id": "admin_post_editor_page",
+      "title": "Admin Post Editor Page",
+      "route": "/admin/posts/edit/[id]",
+      "description": "Page to create or edit a blog post.",
+      "components": [
+        "Rich Text Editor",
+        "Title Field",
+        "Slug Field",
+        "Category/Tags Selector",
+        "Publish Date",
+        "Save/Publish Button"
+      ],
+      "requires_auth": true
+    }
+  ],
+  "ai_widgets": {
+    "responsive_design": {
+      "label": "Responsive Design",
+      "endpoint": "/predict",
+      "input_source": "model_metadata",
+      "output_style": "cards",
+      "visibility": "public"
+    },
+    "seo_optimization": {
+      "label": "SEO Optimization",
+      "endpoint": "/predict",
+      "input_source": "model_metadata",
+      "output_style": "cards",
+      "visibility": "public"
+    },
+    "content_management_system_(cms)_for_blog": {
+      "label": "Content Management System (CMS) for Blog",
+      "endpoint": "/predict",
+      "input_source": "model_metadata",
+      "output_style": "cards",
+      "visibility": "public"
+    },
+    "contact_form": {
+      "label": "Contact Form",
+      "endpoint": "/predict",
+      "input_source": "model_metadata",
+      "output_style": "cards",
+      "visibility": "public"
+    },
+    "image_and_asset_optimization": {
+      "label": "Image and Asset Optimization",
+      "endpoint": "/predict",
+      "input_source": "model_metadata",
+      "output_style": "cards",
+      "visibility": "public"
+    },
+    "social_media_integration": {
+      "label": "Social Media Integration",
+      "endpoint": "/predict",
+      "input_source": "model_metadata",
+      "output_style": "cards",
+      "visibility": "public"
+    },
+    "authentication_system": {
+      "label": "Authentication System",
+      "endpoint": "/predict",
+      "input_source": "model_metadata",
+      "output_style": "cards",
+      "visibility": "public"
+    },
+    "comments_section": {
+      "label": "Comments Section",
+      "endpoint": "/predict",
+      "input_source": "model_metadata",
+      "output_style": "cards",
+      "visibility": "public"
+    }
+  },
+  "backend_routes": [
+    "/context",
+    "/predict"
+  ],
+  "build_flags": {
+    "ml_required": true,
+    "backend_required": true,
+    "frontend_required": true
+  }
+}
